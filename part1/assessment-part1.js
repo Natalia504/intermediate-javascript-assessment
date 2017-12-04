@@ -46,27 +46,32 @@ function daBears(){
 // Which function(s) access the "chair" variable and get "Too Big!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale1 = ["papaBear", "mamaBear"];
+var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+
 
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale2 = ["goldilocks"];
+var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+
 
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale3 = ["mamaBear"];
+var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+
 
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale4 = ["daBears", "papaBear", "mamaBear", "goldilocks"];;
+var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear"];
+var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+
 
 
 // *************
@@ -87,18 +92,10 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear"];
 // CODE HERE...
 
 
-function Vehicle  () {
-   this.gasRemaining = 100;
-}
-Vehicle.prototype.drive = function(){
-    return this.gasRemaining-=25;
-  }
 
-let charger = new Vehicle();
-charger.drive();
-let mustang = new Vehicle();
-mustang.drive();
-mustang.drive();
+
+
+
 
 
 // -----------------------------------------------------------------------------
@@ -123,19 +120,6 @@ mustang.drive();
 
 // CODE HERE...
 
-String.prototype.grammarPolice = function (){
-
-  let strSplit = this.toLowerCase().split(' ');
-  let result;
-  
-    for (var i=0; i<strSplit.length; i++){
-      strSplit[i] = strSplit[i].split('');
-      strSplit[i][0] = strSplit[i][0].toUpperCase();
-      strSplit[i] = strSplit[i].join('')
-      result = strSplit.join(' ')
-  }
-  return result;
-}
 
 
 
@@ -154,14 +138,6 @@ String.prototype.grammarPolice = function (){
 // In all other cases, return "Different values"
 
 // CODE HERE...
-function valueType(a,b){
-  if (a===b){
-    return "Exactly the same"
-  } else if( a==b){
-    return "Same value, different types"
-  } 
-  return "Different values";
-}
 
 
 // *************
@@ -176,8 +152,4 @@ function valueType(a,b){
 var theAnswer = "Unknown";
 
 // CODE HERE...
-function promiseCatcher (param){
- param.then(response => {
-   return theAnswer=response;
- })
-}
+
