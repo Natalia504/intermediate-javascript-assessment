@@ -37,15 +37,20 @@
 var firstUser = 'don\'t touch this string!';
 var thirdUser = 'don\'t touch this string, either!';
 
-function noWeakLink() {
+// function noWeakLink() {
 
-  return $http({
-    method: 'GET',
-    url: '/api/users'
-  })
-  // CODE HERE...
-
-}
+//   return $http({
+//     method: 'GET',
+//     url: '/api/users'
+//   })
+//   .then( res => {firstUser = res.data[0];
+   
+//     return res.data})
+  
+//   .then( res => {thirdUser = res.data[2];
+//     console.log("Hi", res.data); 
+//   return (res.data[9])})
+// }
 
 
 
@@ -75,6 +80,7 @@ function large() {
 }
 // CODE HERE...
 
+var boundToElephant = large.bind(elephant);
 
 
 // *************
@@ -89,7 +95,9 @@ function large() {
 
 // CODE HERE...
 
-
+function deathStar(capacity,crew){
+  return capacity.bind(crew)
+}
 
 // *************
 // * PROBLEM 4 *
@@ -104,7 +112,11 @@ function large() {
 
 // CODE HERE...
 
-
+function accountingOffice(assets){
+  return function(liabilities){
+    return (assets+liabilities)
+  }
+}
 
 // *************
 // * PROBLEM 5 *
@@ -129,7 +141,11 @@ function large() {
 
 // CODE HERE...
 
-
+function forgetter(name){
+  return function rememberall(item){
+  
+  }
+}
 
 // *************
 // * PROBLEM 6 *
@@ -156,3 +172,6 @@ function large() {
 // NOTE: Neither hunger nor danger should be able to exceed 100 or drop below 0.
 
 // CODE HERE...
+function frodo(startingHungerValue, startingDangerValue){
+  
+}
